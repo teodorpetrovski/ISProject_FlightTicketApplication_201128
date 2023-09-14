@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlightTicketShop.Domain\FlightTicketShop.Domain.csproj" />
+    <ProjectReference Include="..\FlightTicketShop.Repository\FlightTicketShop.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

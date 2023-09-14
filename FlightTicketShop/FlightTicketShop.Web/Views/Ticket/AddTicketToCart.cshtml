@@ -1,0 +1,33 @@
+﻿@model FlightTicketShop.Domain.DTO.AddToShoppingCartDto
+
+@{
+    ViewData["Title"] = "AddTicketToCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Add selected product to your shopping card!</h3>
+
+<div class="row mt-4">
+    <div class="col-md-4 m-auto">
+        <form method="post" asp-action="AddTicketToCart">
+            <input type="hidden" asp-for="SelectedTicketId" />
+            <div class="form-group">
+                <label asp-for="SelectedTicket.DepartureCity"></label>
+                <input disabled asp-for="SelectedTicket.DepartureCity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SelectedTicket.ArrivalCity"></label>
+                <input disabled asp-for="SelectedTicket.ArrivalCity" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Quantity"></label>
+                <input type="number" asp-for="Quantity" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
